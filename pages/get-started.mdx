@@ -1,7 +1,9 @@
 # Getting Started with UtilsJS
+
 Welcome to UtilsJS, a powerful and easy-to-use library that contains various utilities.
 
 ## Installation
+
 You can install MyLibrary via npm or yarn. Simply run the following command in your terminal:
 
 ```bash
@@ -18,11 +20,23 @@ Usage
 After installing UtilsJS, you can use it in your project by importing it:
 
 ```typescript
-import * as UtilsJS from 'js-class-utilities';
+import * as UtilsJS from "js-class-utilities";
 ```
+
 You can then use the functions and classes provided by UtilsJS in your project:
 
 ```typescript
-const result = UtilsJS.Strings.Case.swapCase('HelLO WorlD!');
+const result = UtilsJS.Strings.Case.swapCase("HelLO WorlD!");
 console.log(result); // output: 'hELlo wORLd!'
+```
+
+or
+
+```typescript
+const chain = UtilsJS.Chain.SinglebranchChainEngine();
+
+// Create a chain that adds 1 to a number, multiplies it by 2 and appends logger.
+chain.add((x: number) => x + 1).add((x: number) => x * 2).addLogger("Value of x: $val");
+
+chain.run(2); //Should print: Value of x: 6
 ```
